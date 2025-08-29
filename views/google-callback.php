@@ -3,16 +3,13 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../Config/db.php';
 session_start();
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
 // Load Google OAuth configuration
-$config_file = __DIR__ . '/../config/google_oauth.php';
+$config_file = __DIR__ . '/../Config/google_oauth.php';
 if (!file_exists($config_file)) {
-    die('Google OAuth configuration file not found. Please copy config/google_oauth.example.php to config/google_oauth.php and configure your credentials.');
+    die('Google OAuth configuration file not found. Please copy Config/google_oauth.example.php to Config/google_oauth.php and configure your credentials.');
 }
 
 $google_config = require $config_file;

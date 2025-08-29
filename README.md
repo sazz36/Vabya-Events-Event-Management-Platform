@@ -1,3 +1,15 @@
+## Environment variables
+
+Create a `.env` file in the project root with:
+
+```
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost/Event_sphere/Event_sphere/Event_sphere/views/google-callback.php
+```
+
+The file `Config/google_oauth.php` reads these variables at runtime.
+
 ![](https://github.com/googleapis/google-api-php-client/workflows/.github/workflows/tests.yml/badge.svg)
 
 # Google APIs Client Library for PHP #
