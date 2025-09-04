@@ -523,3 +523,4 @@ To automatically fix (fixable) coding style violations, run
 ```
 vendor/bin/phpcbf src --standard=style/ruleset.xml
 ```
+# Vabya-Events-Event-Management-Platform
